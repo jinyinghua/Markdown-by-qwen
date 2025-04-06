@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -15,7 +14,6 @@
             background-color: #f8f9fa;
             color: #343a40;
         }
-
         /* 容器布局 */
         .container {
             max-width: 1200px;
@@ -25,44 +23,39 @@
             flex-wrap: wrap;
             gap: 1.5rem;
         }
-
         /* 侧边栏样式 */
         .sidebar {
-            flex: 0 0 25%;
+            flex: 0 0 auto;
             min-width: 240px;
+            width: 25%;
             background: white;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             padding: 1.25rem;
         }
-
         /* 主内容区样式 */
         .content {
-            flex: 1 1 65%;
-            max-width: 800px;
+            flex: 1 1 auto;
+            max-width: calc(75% - 1.5rem);
             background: white;
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             padding: 1.5rem;
         }
-
         /* 标题样式 */
         h1 {
             color: #2c3e50;
             border-bottom: 2px solid #3498db;
             padding-bottom: 0.5rem;
         }
-
         /* 链接样式 */
         a {
             color: #3498db;
             text-decoration: none;
         }
-
         a:hover {
             text-decoration: underline;
         }
-
         /* 代码块样式 */
         pre {
             background: #f8f9fa;
@@ -70,46 +63,40 @@
             border-radius: 5px;
             overflow-x: auto;
         }
-
         code {
             font-family: 'Fira Code', monospace;
             color: #e74c3c;
         }
-
         /* 响应式设计 */
         @media (max-width: 992px) {
             .container {
                 padding: 0.5rem;
             }
-            
             .sidebar {
-                flex: 0 0 30%;
+                width: 30%;
             }
-            
             .content {
-                flex: 1 1 65%;
+                max-width: calc(70% - 1.5rem);
             }
         }
-
         @media (max-width: 768px) {
             .sidebar,
             .content {
                 flex: 1 100%;
-            }
-            
-            .sidebar {
-                min-width: 100%;
-                margin-bottom: 1rem;
-            }
-            
-            .content {
                 max-width: 100%;
+            }
+            .sidebar {
+                margin-bottom: 1rem;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- 主要内容区域 -->
+        <div class="content" id="article-content">
+            <!-- 知识点内容 -->
+        </div>
         <!-- 侧边栏 -->
         <div class="sidebar">
             <h2>目录（仅预览）</h2>
@@ -121,25 +108,18 @@
             </ul>
             <h2>资料来源</h2>
             <ul>
-                <li><a href="https://zy.21cnjy.com/19304071">二一教育资源库</li>
+                <li><a href="https://zy.21cnjy.com/19304071">二一教育资源库（Qwen2.5-Max 整理）</li>
             </ul>
             <h2>网站编写</h2>
             <ul>
                 <li><a href="chat.qwen.ai">By QwQ-32B</li>
-                <li><a herf="github.com/jinyinghua/Markdown-by-qwen">源码</li>
+                <li><a herf="github.com/jinyinghua/Markdown-by-qwen">源码（GitHub）</li>
             </ul>
         </div>
-
-        <!-- 主要内容区域 -->
-        <div class="content" id="article-content">
-            <!-- 知识点内容 -->
-        </div>
     </div>
-
     <!-- 引入Markdown解析库 -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        
         const markdownContent = ` 
 ## 第一单元 坚持宪法至上
 
