@@ -25,7 +25,7 @@
         }
         /* 侧边栏样式 */
         .sidebar {
-            flex: 0 0 auto;
+            flex: 0 0 20%;
             min-width: 240px;
             width: 25%;
             background: white;
@@ -35,7 +35,7 @@
         }
         /* 主内容区样式 */
         .content {
-            flex: 1 1 auto;
+            flex: 1 1 60%;
             max-width: calc(75% - 1.5rem);
             background: white;
             border-radius: 10px;
@@ -73,10 +73,10 @@
                 padding: 0.5rem;
             }
             .sidebar {
-                width: 30%;
+                width: 25%;
             }
             .content {
-                max-width: calc(70% - 1.5rem);
+                max-width: calc(65% - 1.5rem);
             }
         }
         @media (max-width: 768px) {
@@ -93,10 +93,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- 主要内容区域 -->
-        <div class="content" id="article-content">
-            <!-- 知识点内容 -->
-        </div>
         <!-- 侧边栏 -->
         <div class="sidebar">
             <h2>目录（仅预览）</h2>
@@ -115,6 +111,10 @@
                 <li><a href="chat.qwen.ai">By QwQ-32B</li>
                 <li><a herf="github.com/jinyinghua/Markdown-by-qwen">源码（GitHub）</li>
             </ul>
+        </div>
+        <!-- 主要内容区域 -->
+        <div class="content" id="article-content">
+            <!-- 知识点内容 -->
         </div>
     </div>
     <!-- 引入Markdown解析库 -->
